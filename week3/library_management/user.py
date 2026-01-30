@@ -5,7 +5,6 @@ import json
 
 class User():
     def __init__(self,name,password,borrowed_books):
-        self.borrowed_books =[]
         self.name = name
         self.password = password
         self.borrowed_books = borrowed_books
@@ -41,17 +40,17 @@ class User():
     }
     
 
-# Test için kullanıcı
-test_user = User("Ayşe", "123",[])
+# # Test için kullanıcı
+# test_user = User("Ayşe", "123",[])
 
-# Örnek kitaplar
-all_books = [
-    Book("Ada", "Ahmet", 1900, False, None),
-    Book("Deniz", "Mehmet", 1920, False, None)
-]
+# # Örnek kitaplar
+# all_books = [
+#     Book("Ada", "Ahmet", 1900, False, None),
+#     Book("Deniz", "Mehmet", 1920, False, None)
+# ]
 
-# Ödünç alma testi
-#borrow_by_title(test_user, all_books, "Ada")  # Tek satırla ödünç al
+# # Ödünç alma testi
+# #borrow_by_title(test_user, all_books, "Ada")  # Tek satırla ödünç al
 
-# Kullanıcının ödünç aldığı kitapları listele
-test_user.list_borrowed_books()
+# # Kullanıcının ödünç aldığı kitapları listele
+# #test_user.list_borrowed_books()

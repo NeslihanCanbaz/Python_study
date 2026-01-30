@@ -1,100 +1,18 @@
-[
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    },
-    {
-        "title": "Ada",
-        "author": "Ahmet",
-        "publication_year": 1900,
-        "is_borrowed": true,
-        "borrowed_by": "Ali"
-    }
-]
+{
+    "books": [
+        {
+            "title": "Ada",
+            "author": "Ahmet",
+            "publication_year": 1900,
+            "is_borrowed": false,
+            "borrowed_by": null
+        }
+    ],
+    "users": [
+        {
+            "name": "neslihan",
+            "password": "1234",
+            "borrowed_books": []
+        }
+    ]
+}

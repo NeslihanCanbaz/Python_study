@@ -1,11 +1,4 @@
-import os
-import json
 
-
-data_file = "library.json"
-all_books = [] 
-
-         
 
 class Book():
     def __init__(self,title,author,publication_year,is_borrowed,borrowed_by):
@@ -22,7 +15,6 @@ class Book():
        print("Is borrowed: ",self.is_borrowed)
        print("Borrowed by: ",self.borrowed_by)
          
-
     def borrow(self,user):
         if self.is_borrowed==True:
             print("The book was already borrowed by: ",self.borrowed_by)
@@ -31,10 +23,6 @@ class Book():
             self.is_borrowed = True        # kitabı ödünç aldık
             self.borrowed_by = user         # kullanıcıyı atadık
             print(f"{self.title} has been borrowed by {user}.")   
-
-            with open("library.json", "w", encoding="utf-8") as f:
-                json.dump([book.to_dict() for book in all_books], f, ensure_ascii=False, indent=4)
- 
 
     def return_book(self,):
         if self.is_borrowed == False:
@@ -45,10 +33,6 @@ class Book():
             self.borrowed_by = None
             print(f"The book returned by: {user}")
 
-        with open(data_file, "w", encoding="utf-8") as f:
-            json.dump([book.to_dict() for book in all_books], f,ensure_ascii=False, indent=4)    
-    
-   
     def to_dict(self):
         return {
             "title": self.title,
@@ -69,21 +53,3 @@ class Magazine(Book):
         Book.__init__(self,title,author,publication_year,is_borrowed,borrowed_by)
         self.issue = issue
 
-if os.path.exists(data_file):
-    with open(data_file, "r", encoding= "utf-8") as f:
-        data = json.load(f)
-        all_books = [Book(**book) for book in data]
-else:
-    with open(data_file, "w", encoding="utf-8") as f:
-        json.dump([], f, ensure_ascii=False, indent=4)
-    all_books = []   
-
-book = Book("Ada", "Ahmet", 1900, False,None)
-all_books.append(book)
-book.show_info()
-book.borrow("Ali")
-book.to_dict()
-book1 = Book("Deniz", "Mehmet", 1920, False,None)
-all_books.append(book1)
-book1.show_info()
-book1.to_dict()

@@ -4,10 +4,10 @@ import json
 import os
 
 class Library():
-    def __init__(self,name,books,users):
+    def __init__(self,name):
         self.name = name
-        self.books = books
-        self.users = users
+        self.books = []
+        self.users = []
 
     def add_book(self,book):
         for b in self.books:
@@ -27,10 +27,12 @@ class Library():
 
     def show_all_books(self):
         for book in self.books:
+            print("-" * 40)
             print("Title:",book.title)
             print("Author:",book.author)
-            print("Available:",book.is_borrowed)
+            print("Available:", not book.is_borrowed)
             print("Borrowed by:",book.borrowed_by)
+            print("-" * 40)
 
     def login(self,name,password):
         for user in self.users:
@@ -39,8 +41,24 @@ class Library():
             
         print("user not found or password incorrect")
         return None
+    
+    def borrow_book(self,user,title):
+        title = title.strip()
+        for book in self.books:
+            if book.title == title:
+                user.borrow_book(book)
+                return 
+        print("Book not found")
 
-    def save(sel,file):     #save to json
+    def return_book(self,user,title):
+        title = title.strip()
+        for book in self.books:
+            if book.title == title:
+                user.return_book(book)
+                return
+        print("Book not found.")         
+
+    def save(self,file):     #save to json
         book_list =[book.to_dict() for book in self.books]
         user_list =[user.to_dict() for user in self.users]
         data ={
@@ -51,6 +69,8 @@ class Library():
             json.dump(data,f,ensure_ascii=False, indent=4)
 
     def load(self,file):      #load from json
+        if not os.path.exists(file):
+            return
         with open(file, "r", encoding="utf-8") as f:
             data = json.load(f)
 
@@ -71,3 +91,5 @@ class Library():
                 book = next((b for b in self.books if b.title == title), None)
                 if book:
                     user.borrowed_books.append(book)
+                    book.is_borrowed = True
+                    book.borrowed_by = user.name
