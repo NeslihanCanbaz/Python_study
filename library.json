@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    },
+    {
+        "title": "Ada",
+        "author": "Ahmet",
+        "publication_year": 1900,
+        "is_borrowed": true,
+        "borrowed_by": "Ali"
+    }
+]

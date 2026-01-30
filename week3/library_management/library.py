@@ -1,4 +1,7 @@
-
+from book import Book
+from user import User
+import json
+import os
 
 class Library():
     def __init__(self,name,books,users):
@@ -7,7 +10,7 @@ class Library():
         self.users = users
 
     def add_book(book):
-        pass   
+          
 
     def add_user(user):
         pass
@@ -16,7 +19,7 @@ class Library():
         pass
 
     def login(name,password):
-        print(name, password)
+        pass
 
     def save(file):     #save to json
         pass

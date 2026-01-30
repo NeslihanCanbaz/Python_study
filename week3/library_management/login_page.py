@@ -38,6 +38,11 @@ while True:
 
 
 
-
+def borrow_by_title(user, all_books, title):
+    book_to_borrow = next((b for b in all_books if b.title == title), None)
+    if book_to_borrow:
+        user.borrow_book(book_to_borrow)
+    else:
+        print(f"Book '{title}' not found!")
 
     
